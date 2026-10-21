@@ -220,7 +220,8 @@ if __name__ == "__main__":
     # HTTP transport par server start karna.
     # 0.0.0.0 Render ke network se incoming requests accept karta hai.
     mcp.run(
-        transport="http",
-        host="0.0.0.0",
-        port=port
-    )
+    transport="http",
+    host="0.0.0.0",
+    port=port,
+    stateless_http=True  # Session ID ke bina HTTP requests allow karega
+)
